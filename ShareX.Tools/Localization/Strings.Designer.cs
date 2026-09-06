@@ -5637,7 +5637,7 @@ namespace ShareX.Tools.Localization {
         }
 
         /// <summary>
-        ///   Show output
+        ///   Show output folder...
         /// </summary>
         public static string VideoTrimmer_ShowOutput {
             get {

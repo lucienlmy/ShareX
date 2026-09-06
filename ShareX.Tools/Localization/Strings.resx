@@ -1916,6 +1916,6 @@
     <value>Cancelled.</value>
   </data>
   <data name="VideoTrimmer_ShowOutput" xml:space="preserve">
-    <value>Show output</value>
+    <value>Show output folder...</value>
   </data>
 </root>

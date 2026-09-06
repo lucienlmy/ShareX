@@ -117,7 +117,7 @@
                                 <TextBlock Text="{Binding PrimaryActionText}"/>
                             </StackPanel>
                         </Button>
-                        <Button Command="{Binding OpenOutputCommand}" IsVisible="{Binding HasOutput}"
+                        <Button Command="{Binding OpenOutputCommand}" IsEnabled="{Binding HasOutput}"
                                 ToolTip.Tip="{x:Static loc:Strings.VideoTrimmer_ShowOutput}"
                                 AutomationProperties.Name="{x:Static loc:Strings.VideoTrimmer_ShowOutput}">
                             <TextBlock Classes="icon" Text="{x:Static theming:LucideIcons.folder_open}"/>
