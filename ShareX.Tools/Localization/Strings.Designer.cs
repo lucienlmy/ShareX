@@ -5457,7 +5457,7 @@ namespace ShareX.Tools.Localization {
         }
 
         /// <summary>
-        ///   No re-encoding. Keyframe-based cuts may include extra content.
+        ///   Copies the original streams without re-encoding. Cut points may shift to nearby keyframes.
         /// </summary>
         public static string VideoTrimmer_CopyHint {
             get {
@@ -5466,7 +5466,7 @@ namespace ShareX.Tools.Localization {
         }
 
         /// <summary>
-        ///   Re-encode to H.264 / AAC MP4 for precise cuts. Subtitles are not included.
+        ///   Re-encodes to H.264 / AAC MP4 for exact cut points.
         /// </summary>
         public static string VideoTrimmer_PreciseHint {
             get {
@@ -5475,7 +5475,25 @@ namespace ShareX.Tools.Localization {
         }
 
         /// <summary>
-        ///   Precise trim
+        ///   Trim mode:
+        /// </summary>
+        public static string VideoTrimmer_TrimMode {
+            get {
+                return ResourceManager.GetString("VideoTrimmer_TrimMode", resourceCulture);
+            }
+        }
+
+        /// <summary>
+        ///   Lossless (fast)
+        /// </summary>
+        public static string VideoTrimmer_Lossless {
+            get {
+                return ResourceManager.GetString("VideoTrimmer_Lossless", resourceCulture);
+            }
+        }
+
+        /// <summary>
+        ///   Precise (re-encode)
         /// </summary>
         public static string VideoTrimmer_Precise {
             get {

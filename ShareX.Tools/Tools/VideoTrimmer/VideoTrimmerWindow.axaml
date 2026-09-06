@@ -93,12 +93,18 @@
                 </Grid>
             </Border>
 
-            <Grid Grid.Row="2" ColumnDefinitions="Auto,*" ColumnSpacing="16">
-                <CheckBox IsChecked="{Binding Precise}" IsEnabled="{Binding CanBrowse}" VerticalAlignment="Center">
+            <Grid Grid.Row="2" ColumnDefinitions="Auto,Auto,Auto" ColumnSpacing="16">
+                <TextBlock Classes="row-label" Text="{x:Static loc:Strings.VideoTrimmer_TrimMode}"/>
+                <RadioButton Grid.Column="1" GroupName="TrimMode" IsChecked="{Binding Lossless, Mode=TwoWay}"
+                             IsEnabled="{Binding CanBrowse}" VerticalAlignment="Center"
+                             ToolTip.Tip="{x:Static loc:Strings.VideoTrimmer_CopyHint}">
+                    <TextBlock Text="{x:Static loc:Strings.VideoTrimmer_Lossless}" FontWeight="Normal"/>
+                </RadioButton>
+                <RadioButton Grid.Column="2" GroupName="TrimMode" IsChecked="{Binding Precise, Mode=TwoWay}"
+                             IsEnabled="{Binding CanBrowse}" VerticalAlignment="Center"
+                             ToolTip.Tip="{x:Static loc:Strings.VideoTrimmer_PreciseHint}">
                     <TextBlock Text="{x:Static loc:Strings.VideoTrimmer_Precise}" FontWeight="Normal"/>
-                </CheckBox>
-                <TextBlock Grid.Column="1" Text="{Binding ModeDescription}" FontWeight="Normal"
-                           FontSize="12" TextWrapping="Wrap" VerticalAlignment="Center"/>
+                </RadioButton>
             </Grid>
 
             <Grid Grid.Row="3" ColumnDefinitions="Auto,Auto,*,Auto" ColumnSpacing="8">

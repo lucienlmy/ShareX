@@ -1856,13 +1856,19 @@
     <value>Keep {0}</value>
   </data>
   <data name="VideoTrimmer_CopyHint" xml:space="preserve">
-    <value>No re-encoding. Keyframe-based cuts may include extra content.</value>
+    <value>Copies the original streams without re-encoding. Cut points may shift to nearby keyframes.</value>
   </data>
   <data name="VideoTrimmer_PreciseHint" xml:space="preserve">
-    <value>Re-encode to H.264 / AAC MP4 for precise cuts. Subtitles are not included.</value>
+    <value>Re-encodes to H.264 / AAC MP4 for exact cut points.</value>
+  </data>
+  <data name="VideoTrimmer_TrimMode" xml:space="preserve">
+    <value>Trim mode:</value>
+  </data>
+  <data name="VideoTrimmer_Lossless" xml:space="preserve">
+    <value>Lossless (fast)</value>
   </data>
   <data name="VideoTrimmer_Precise" xml:space="preserve">
-    <value>Precise trim</value>
+    <value>Precise (re-encode)</value>
   </data>
   <data name="VideoTrimmer_Start" xml:space="preserve">
     <value>Start:</value>

@@ -69,7 +69,11 @@ public sealed partial class VideoTrimmerViewModel : ViewModelBase, IDisposable
     public bool CanBrowse => !IsExporting;
     public bool IsWorking => IsLoading || IsExporting;
     public bool HasOutput => !string.IsNullOrEmpty(OutputFilePath);
-    public string ModeDescription => Precise ? Strings.VideoTrimmer_PreciseHint : Strings.VideoTrimmer_CopyHint;
+    public bool Lossless
+    {
+        get => !Precise;
+        set { if (value) Precise = false; }
+    }
     public string PositionText => FormatTime(Position);
     public string DurationText => FormatTime(Duration);
     public string StartTimeText => FormatTime(Start);
@@ -285,7 +289,10 @@ public sealed partial class VideoTrimmerViewModel : ViewModelBase, IDisposable
     }
     partial void OnInputFilePathChanged(string value) => OnPropertyChanged(nameof(InputDisplay));
     partial void OnOutputFilePathChanged(string value) => OnPropertyChanged(nameof(HasOutput));
-    partial void OnPreciseChanged(bool value) => OnPropertyChanged(nameof(ModeDescription));
+    partial void OnPreciseChanged(bool value)
+    {
+        OnPropertyChanged(nameof(Lossless));
+    }
     partial void OnIsLoadingChanged(bool value) => OnPropertyChanged(nameof(IsWorking));
     partial void OnIsExportingChanged(bool value)
     {
