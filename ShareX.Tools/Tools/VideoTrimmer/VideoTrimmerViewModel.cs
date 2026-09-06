@@ -35,6 +35,7 @@ public sealed record VideoTrimmerThumbnail(double Position, Bitmap Image);
 public sealed partial class VideoTrimmerViewModel : ViewModelBase, IDisposable
 {
     private readonly VideoTrimmerService _service;
+    private readonly Action? _playNotificationSound;
     private readonly CancellationTokenSource _lifetime = new();
     private readonly SemaphoreSlim _previewGate = new(1);
     private readonly List<VideoTrimmerThumbnail> _thumbnails = [];
@@ -58,7 +59,11 @@ public sealed partial class VideoTrimmerViewModel : ViewModelBase, IDisposable
     [ObservableProperty] private bool _isExporting;
     [ObservableProperty] private double _progress;
 
-    public VideoTrimmerViewModel(string ffmpegPath) => _service = new(ffmpegPath);
+    public VideoTrimmerViewModel(string ffmpegPath, Action? playNotificationSound = null)
+    {
+        _service = new(ffmpegPath);
+        _playNotificationSound = playNotificationSound;
+    }
 
     public Func<Task<string?>>? SelectInputRequested { get; set; }
     public Func<string, Task<string?>>? SelectOutputRequested { get; set; }
@@ -346,6 +351,7 @@ public sealed partial class VideoTrimmerViewModel : ViewModelBase, IDisposable
             Progress = 100;
             OutputFilePath = output;
             StatusText = string.Format(Strings.VideoTrimmer_Saved, output);
+            _playNotificationSound?.Invoke();
         }
         catch (OperationCanceledException) { StatusText = Strings.VideoTrimmer_Cancelled; }
         catch (Exception ex) { StatusText = ex.Message; }

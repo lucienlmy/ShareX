@@ -39,9 +39,9 @@ public partial class VideoTrimmerWindow : Window
 
     public VideoTrimmerWindow() : this("ffmpeg.exe") { }
 
-    public VideoTrimmerWindow(string ffmpegPath, string? inputFilePath = null)
+    public VideoTrimmerWindow(string ffmpegPath, string? inputFilePath = null, Action? playNotificationSound = null)
     {
-        _viewModel = new(ffmpegPath);
+        _viewModel = new(ffmpegPath, playNotificationSound);
         DataContext = _viewModel;
         AvaloniaXamlLoader.Load(this);
         RequestedThemeVariant = ThemeManager.GetCurrentTheme();

@@ -1150,7 +1150,10 @@ namespace ShareX
             taskSettings ??= TaskSettings.GetDefaultTaskSettings();
             if (CheckFFmpeg(taskSettings))
             {
-                ToolsIntegration.ShowVideoTrimmerWindow(taskSettings.CaptureSettings.FFmpegOptions.FFmpegPath, inputFilePath);
+                ToolsIntegration.ShowVideoTrimmerWindow(
+                    taskSettings.CaptureSettings.FFmpegOptions.FFmpegPath,
+                    inputFilePath,
+                    () => PlayNotificationSoundAsync(NotificationSound.ActionCompleted, taskSettings));
             }
         }
 
