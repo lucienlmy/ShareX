@@ -94,36 +94,32 @@
             </Border>
 
             <Border Grid.Row="2" Classes="tool-panel">
-                <Grid RowDefinitions="Auto,Auto" RowSpacing="8">
-                    <Grid ColumnDefinitions="Auto,Auto,Auto" ColumnSpacing="16">
-                        <TextBlock Classes="row-label" Text="{x:Static loc:Strings.VideoTrimmer_TrimMode}"/>
-                        <RadioButton Grid.Column="1" GroupName="TrimMode" IsChecked="{Binding Lossless, Mode=TwoWay}"
-                                     IsEnabled="{Binding CanBrowse}" VerticalAlignment="Center"
-                                     ToolTip.Tip="{x:Static loc:Strings.VideoTrimmer_CopyHint}">
-                            <TextBlock Text="{x:Static loc:Strings.VideoTrimmer_Lossless}" FontWeight="Normal"/>
-                        </RadioButton>
-                        <RadioButton Grid.Column="2" GroupName="TrimMode" IsChecked="{Binding Precise, Mode=TwoWay}"
-                                     IsEnabled="{Binding CanBrowse}" VerticalAlignment="Center"
-                                     ToolTip.Tip="{x:Static loc:Strings.VideoTrimmer_PreciseHint}">
-                            <TextBlock Text="{x:Static loc:Strings.VideoTrimmer_Precise}" FontWeight="Normal"/>
-                        </RadioButton>
-                    </Grid>
+                <Grid ColumnDefinitions="Auto,Auto,Auto,*" ColumnSpacing="16">
+                    <TextBlock Classes="row-label" Text="{x:Static loc:Strings.VideoTrimmer_TrimMode}"/>
+                    <RadioButton Grid.Column="1" GroupName="TrimMode" IsChecked="{Binding Lossless, Mode=TwoWay}"
+                                 IsEnabled="{Binding CanBrowse}" VerticalAlignment="Center"
+                                 ToolTip.Tip="{x:Static loc:Strings.VideoTrimmer_CopyHint}">
+                        <TextBlock Text="{x:Static loc:Strings.VideoTrimmer_Lossless}" FontWeight="Normal"/>
+                    </RadioButton>
+                    <RadioButton Grid.Column="2" GroupName="TrimMode" IsChecked="{Binding Precise, Mode=TwoWay}"
+                                 IsEnabled="{Binding CanBrowse}" VerticalAlignment="Center"
+                                 ToolTip.Tip="{x:Static loc:Strings.VideoTrimmer_PreciseHint}">
+                        <TextBlock Text="{x:Static loc:Strings.VideoTrimmer_Precise}" FontWeight="Normal"/>
+                    </RadioButton>
 
-                    <Grid Grid.Row="1" ColumnDefinitions="Auto,Auto,*,Auto" ColumnSpacing="8">
+                    <StackPanel Grid.Column="3" Orientation="Horizontal" Spacing="8" HorizontalAlignment="Right">
                         <Button Command="{Binding ExportCommand}" IsEnabled="{Binding CanTrim}">
                             <StackPanel Orientation="Horizontal" Spacing="8">
                                 <TextBlock Classes="icon" Text="{x:Static theming:LucideIcons.scissors}"/>
                                 <TextBlock Text="{x:Static loc:Strings.VideoTrimmer_Export}"/>
                             </StackPanel>
                         </Button>
-                        <Button Grid.Column="1" Command="{Binding OpenOutputCommand}" IsVisible="{Binding HasOutput}"
+                        <Button Command="{Binding OpenOutputCommand}" IsVisible="{Binding HasOutput}"
                                 ToolTip.Tip="{x:Static loc:Strings.VideoTrimmer_ShowOutput}"
                                 AutomationProperties.Name="{x:Static loc:Strings.VideoTrimmer_ShowOutput}">
                             <TextBlock Classes="icon" Text="{x:Static theming:LucideIcons.folder_open}"/>
                         </Button>
-                        <Button Grid.Column="3" Content="{x:Static loc:Strings.VideoTrimmer_Cancel}"
-                                Command="{Binding CancelCommand}" IsVisible="{Binding IsWorking}"/>
-                    </Grid>
+                    </StackPanel>
                 </Grid>
             </Border>
         </Grid>
