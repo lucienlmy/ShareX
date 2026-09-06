@@ -28,7 +28,7 @@
             <Border Grid.Row="1" Classes="tool-panel">
                 <Grid RowDefinitions="*,Auto,Auto,Auto,Auto" RowSpacing="8">
                     <Border Background="{DynamicResource ShareX.Brush.Background.Main}" CornerRadius="4" ClipToBounds="True">
-                        <Grid Margin="8">
+                        <Grid>
                             <Image Source="{Binding Preview}" Stretch="Uniform"
                                    RenderOptions.BitmapInterpolationMode="HighQuality"/>
                             <StackPanel IsVisible="{Binding !HasVideo}" Spacing="12"
@@ -41,7 +41,7 @@
                     </Border>
 
                     <Grid Grid.Row="1" Margin="0,4,0,0">
-                        <StackPanel Orientation="Horizontal" Spacing="6">
+                        <StackPanel Orientation="Horizontal" Spacing="6" HorizontalAlignment="Center">
                             <TextBlock Text="{Binding PositionText}" FontWeight="Normal" Foreground="{DynamicResource ShareX.Brush.Text}"/>
                             <TextBlock Text="/" FontWeight="Normal"/>
                             <TextBlock Text="{Binding DurationText}" FontWeight="Normal"/>
