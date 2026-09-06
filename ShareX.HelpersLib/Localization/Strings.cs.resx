@@ -736,6 +736,9 @@
   <data name="HotkeyType_MonitorTest" xml:space="preserve">
     <value>Test monitoru</value>
   </data>
+  <data name="HotkeyType_NetworkMonitor" xml:space="preserve">
+    <value>Sledování sítě</value>
+  </data>
   <data name="HotkeyType_None" xml:space="preserve">
     <value>Žádná</value>
   </data>

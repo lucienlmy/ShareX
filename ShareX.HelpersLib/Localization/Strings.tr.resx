@@ -736,6 +736,9 @@
   <data name="HotkeyType_MonitorTest" xml:space="preserve">
     <value>Monitör testi</value>
   </data>
+  <data name="HotkeyType_NetworkMonitor" xml:space="preserve">
+    <value>Ağ izleyicisi</value>
+  </data>
   <data name="HotkeyType_None" xml:space="preserve">
     <value>Hiçbiri</value>
   </data>

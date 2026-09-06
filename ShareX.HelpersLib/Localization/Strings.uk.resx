@@ -736,6 +736,9 @@
   <data name="HotkeyType_MonitorTest" xml:space="preserve">
     <value>Тест монітора</value>
   </data>
+  <data name="HotkeyType_NetworkMonitor" xml:space="preserve">
+    <value>Монітор мережі</value>
+  </data>
   <data name="HotkeyType_None" xml:space="preserve">
     <value>Немає</value>
   </data>

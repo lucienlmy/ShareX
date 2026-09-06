@@ -736,6 +736,9 @@
   <data name="HotkeyType_MonitorTest" xml:space="preserve">
     <value>בדיקת מסך</value>
   </data>
+  <data name="HotkeyType_NetworkMonitor" xml:space="preserve">
+    <value>מנטר רשת</value>
+  </data>
   <data name="HotkeyType_None" xml:space="preserve">
     <value>ללא</value>
   </data>

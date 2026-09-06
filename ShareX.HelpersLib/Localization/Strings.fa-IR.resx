@@ -736,6 +736,9 @@
   <data name="HotkeyType_MonitorTest" xml:space="preserve">
     <value>تست صفحه نمایش ...</value>
   </data>
+  <data name="HotkeyType_NetworkMonitor" xml:space="preserve">
+    <value>پایشگر شبکه</value>
+  </data>
   <data name="HotkeyType_None" xml:space="preserve">
     <value>هیچ کدام</value>
   </data>

@@ -336,6 +336,8 @@ namespace ShareX
         [Category(EnumExtensions.HotkeyType_Category_Tools)]
         InspectWindow,
         [Category(EnumExtensions.HotkeyType_Category_Tools)]
+        NetworkMonitor,
+        [Category(EnumExtensions.HotkeyType_Category_Tools)]
         MonitorTest,
         // Other
         [Category(EnumExtensions.HotkeyType_Category_Other)]

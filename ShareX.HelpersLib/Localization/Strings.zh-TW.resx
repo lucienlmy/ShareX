@@ -736,6 +736,9 @@
   <data name="HotkeyType_MonitorTest" xml:space="preserve">
     <value>顯示器測試</value>
   </data>
+  <data name="HotkeyType_NetworkMonitor" xml:space="preserve">
+    <value>網路監控器</value>
+  </data>
   <data name="HotkeyType_None" xml:space="preserve">
     <value>無</value>
   </data>

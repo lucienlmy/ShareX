@@ -736,6 +736,9 @@
   <data name="HotkeyType_MonitorTest" xml:space="preserve">
     <value>Prova Monitor</value>
   </data>
+  <data name="HotkeyType_NetworkMonitor" xml:space="preserve">
+    <value>Monitor di rete</value>
+  </data>
   <data name="HotkeyType_None" xml:space="preserve">
     <value>Nessuna</value>
   </data>

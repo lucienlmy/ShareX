@@ -736,6 +736,9 @@
   <data name="HotkeyType_MonitorTest" xml:space="preserve">
     <value>모니터 테스트</value>
   </data>
+  <data name="HotkeyType_NetworkMonitor" xml:space="preserve">
+    <value>네트워크 모니터</value>
+  </data>
   <data name="HotkeyType_None" xml:space="preserve">
     <value>없음</value>
   </data>

@@ -830,6 +830,9 @@ namespace ShareX.HelpersLib.Localization {
         public static string HotkeyType_MonitorTest {
             get { return ResourceManager.GetString("HotkeyType_MonitorTest", resourceCulture); }
         }
+        public static string HotkeyType_NetworkMonitor {
+            get { return ResourceManager.GetString("HotkeyType_NetworkMonitor", resourceCulture); }
+        }
         public static string HotkeyType_None {
             get { return ResourceManager.GetString("HotkeyType_None", resourceCulture); }
         }

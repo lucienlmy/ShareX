@@ -363,6 +363,9 @@ namespace ShareX
                 case HotkeyType.InspectWindow:
                     OpenInspectWindow();
                     break;
+                case HotkeyType.NetworkMonitor:
+                    OpenNetworkMonitor();
+                    break;
                 case HotkeyType.MonitorTest:
                     OpenMonitorTest();
                     break;
@@ -2285,6 +2288,7 @@ namespace ShareX
                 HotkeyType.ActiveWindowBorderless => LucideIcons.maximize,
                 HotkeyType.ActiveWindowTopMost => LucideIcons.panel_top,
                 HotkeyType.InspectWindow => LucideIcons.scan_search,
+                HotkeyType.NetworkMonitor => LucideIcons.activity,
                 HotkeyType.MonitorTest => LucideIcons.test_tube,
 
                 // Other
