@@ -102,7 +102,7 @@
             </Grid>
 
             <Grid Grid.Row="3" ColumnDefinitions="Auto,Auto,*,Auto" ColumnSpacing="8">
-                <Button Grid.Column="0" Command="{Binding ExportCommand}" IsEnabled="{Binding CanEdit}">
+                <Button Grid.Column="0" Command="{Binding ExportCommand}" IsEnabled="{Binding CanTrim}">
                     <StackPanel Orientation="Horizontal" Spacing="8">
                         <TextBlock Classes="icon" Text="{x:Static theming:LucideIcons.scissors}"/>
                         <TextBlock Text="{x:Static loc:Strings.VideoTrimmer_Export}"/>

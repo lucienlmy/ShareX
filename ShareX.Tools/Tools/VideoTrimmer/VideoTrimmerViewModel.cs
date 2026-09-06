@@ -65,6 +65,7 @@ public sealed partial class VideoTrimmerViewModel : ViewModelBase, IDisposable
     public IReadOnlyList<VideoTrimmerThumbnail> Thumbnails => _thumbnails;
     public bool HasVideo => Duration > 0;
     public bool CanEdit => HasVideo && !IsExporting;
+    public bool CanTrim => CanEdit && (Start >= 0.001 || End <= Duration - 0.001);
     public bool CanBrowse => !IsExporting;
     public bool IsWorking => IsLoading || IsExporting;
     public bool HasOutput => !string.IsNullOrEmpty(OutputFilePath);
@@ -259,6 +260,7 @@ public sealed partial class VideoTrimmerViewModel : ViewModelBase, IDisposable
         OnPropertyChanged(nameof(StartTimeText));
         OnPropertyChanged(nameof(SelectionDurationText));
         OnPropertyChanged(nameof(SelectionText));
+        OnPropertyChanged(nameof(CanTrim));
         if (HasVideo) Position = Start;
     }
 
@@ -269,6 +271,7 @@ public sealed partial class VideoTrimmerViewModel : ViewModelBase, IDisposable
         OnPropertyChanged(nameof(EndTimeText));
         OnPropertyChanged(nameof(SelectionDurationText));
         OnPropertyChanged(nameof(SelectionText));
+        OnPropertyChanged(nameof(CanTrim));
         if (HasVideo) Position = End;
     }
 
@@ -277,6 +280,7 @@ public sealed partial class VideoTrimmerViewModel : ViewModelBase, IDisposable
     {
         OnPropertyChanged(nameof(HasVideo));
         OnPropertyChanged(nameof(CanEdit));
+        OnPropertyChanged(nameof(CanTrim));
         OnPropertyChanged(nameof(DurationText));
     }
     partial void OnInputFilePathChanged(string value) => OnPropertyChanged(nameof(InputDisplay));
@@ -286,6 +290,7 @@ public sealed partial class VideoTrimmerViewModel : ViewModelBase, IDisposable
     partial void OnIsExportingChanged(bool value)
     {
         OnPropertyChanged(nameof(CanEdit));
+        OnPropertyChanged(nameof(CanTrim));
         OnPropertyChanged(nameof(CanBrowse));
         OnPropertyChanged(nameof(IsWorking));
     }
@@ -306,7 +311,7 @@ public sealed partial class VideoTrimmerViewModel : ViewModelBase, IDisposable
     [RelayCommand]
     private async Task ExportAsync()
     {
-        if (!CanEdit || SelectOutputRequested == null || _disposed) return;
+        if (!CanTrim || SelectOutputRequested == null || _disposed) return;
         IsExporting = true;
         using CancellationTokenSource cancellation = CancellationTokenSource.CreateLinkedTokenSource(_lifetime.Token);
         _exportCancellation = cancellation;
