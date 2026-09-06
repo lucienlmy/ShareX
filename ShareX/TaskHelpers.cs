@@ -2289,7 +2289,7 @@ namespace ShareX
                 HotkeyType.ActiveWindowTopMost => LucideIcons.panel_top,
                 HotkeyType.InspectWindow => LucideIcons.scan_search,
                 HotkeyType.NetworkMonitor => LucideIcons.activity,
-                HotkeyType.MonitorTest => LucideIcons.test_tube,
+                HotkeyType.MonitorTest => LucideIcons.monitor,
 
                 // Other
                 HotkeyType.DisableHotkeys => LucideIcons.keyboard_off,
