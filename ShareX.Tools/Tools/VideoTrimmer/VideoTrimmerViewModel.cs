@@ -68,7 +68,10 @@ public sealed partial class VideoTrimmerViewModel : ViewModelBase, IDisposable
     public bool CanTrim => CanEdit && (Start >= 0.001 || End <= Duration - 0.001);
     public bool CanBrowse => !IsExporting;
     public bool IsWorking => IsLoading || IsExporting;
+    public bool CanUsePrimaryAction => IsExporting || CanTrim;
     public bool HasOutput => !string.IsNullOrEmpty(OutputFilePath);
+    public System.Windows.Input.ICommand PrimaryActionCommand => IsExporting ? CancelCommand : ExportCommand;
+    public string PrimaryActionText => IsExporting ? Strings.VideoTrimmer_Cancel : Strings.VideoTrimmer_Export;
     public bool Lossless
     {
         get => !Precise;
@@ -265,6 +268,7 @@ public sealed partial class VideoTrimmerViewModel : ViewModelBase, IDisposable
         OnPropertyChanged(nameof(SelectionDurationText));
         OnPropertyChanged(nameof(SelectionText));
         OnPropertyChanged(nameof(CanTrim));
+        OnPropertyChanged(nameof(CanUsePrimaryAction));
         if (HasVideo) Position = Start;
     }
 
@@ -276,6 +280,7 @@ public sealed partial class VideoTrimmerViewModel : ViewModelBase, IDisposable
         OnPropertyChanged(nameof(SelectionDurationText));
         OnPropertyChanged(nameof(SelectionText));
         OnPropertyChanged(nameof(CanTrim));
+        OnPropertyChanged(nameof(CanUsePrimaryAction));
         if (HasVideo) Position = End;
     }
 
@@ -285,6 +290,7 @@ public sealed partial class VideoTrimmerViewModel : ViewModelBase, IDisposable
         OnPropertyChanged(nameof(HasVideo));
         OnPropertyChanged(nameof(CanEdit));
         OnPropertyChanged(nameof(CanTrim));
+        OnPropertyChanged(nameof(CanUsePrimaryAction));
         OnPropertyChanged(nameof(DurationText));
     }
     partial void OnInputFilePathChanged(string value) => OnPropertyChanged(nameof(InputDisplay));
@@ -300,6 +306,9 @@ public sealed partial class VideoTrimmerViewModel : ViewModelBase, IDisposable
         OnPropertyChanged(nameof(CanTrim));
         OnPropertyChanged(nameof(CanBrowse));
         OnPropertyChanged(nameof(IsWorking));
+        OnPropertyChanged(nameof(CanUsePrimaryAction));
+        OnPropertyChanged(nameof(PrimaryActionCommand));
+        OnPropertyChanged(nameof(PrimaryActionText));
     }
 
     [RelayCommand] private void SetStart() { if (CanEdit) Start = Position; }
