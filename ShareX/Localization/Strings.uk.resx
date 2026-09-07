@@ -2885,4 +2885,5 @@
   <data name="YourSystemAdminDisabledTheUploadFeature" xml:space="preserve">
     <value>Ваш системний адміністратор вимкнув функцію вивантаження.</value>
   </data>
+  <data name="MainWindow_TrimVideo" xml:space="preserve"><value>Обрізати відео...</value></data>
 </root>

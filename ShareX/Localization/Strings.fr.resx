@@ -2885,4 +2885,5 @@ Vous pourrez les désactiver plus tard depuis le manu "Tâches après la capture
   <data name="YourSystemAdminDisabledTheUploadFeature" xml:space="preserve">
     <value>Votre administrateur système a désactivé la fonctionnalité de mise en ligne.</value>
   </data>
+  <data name="MainWindow_TrimVideo" xml:space="preserve"><value>Découper la vidéo...</value></data>
 </root>

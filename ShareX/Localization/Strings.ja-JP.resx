@@ -2885,4 +2885,5 @@
   <data name="YourSystemAdminDisabledTheUploadFeature" xml:space="preserve">
     <value>お使いのシステムの管理者がアップロード機能を無効にしています。</value>
   </data>
+  <data name="MainWindow_TrimVideo" xml:space="preserve"><value>動画をトリミング...</value></data>
 </root>

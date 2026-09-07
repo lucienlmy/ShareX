@@ -2885,4 +2885,5 @@ Puteți să le dezactivați ulterior din meniul "Sarcini după captură".</value
   <data name="YourSystemAdminDisabledTheUploadFeature" xml:space="preserve">
     <value>Administratorul de sistem a dezactivat funcția de încărcare.</value>
   </data>
+  <data name="MainWindow_TrimVideo" xml:space="preserve"><value>Decupează videoclipul...</value></data>
 </root>

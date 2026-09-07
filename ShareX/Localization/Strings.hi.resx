@@ -2885,4 +2885,5 @@
   <data name="YourSystemAdminDisabledTheUploadFeature" xml:space="preserve">
     <value>आपके सिस्टम व्यवस्थापक ने अपलोड सुविधा अक्षम की है।</value>
   </data>
+  <data name="MainWindow_TrimVideo" xml:space="preserve"><value>वीडियो ट्रिम करें...</value></data>
 </root>

@@ -2885,4 +2885,5 @@
   <data name="YourSystemAdminDisabledTheUploadFeature" xml:space="preserve">
     <value>מנהל המערכת שלך השבית את תכונת ההעלאה.</value>
   </data>
+  <data name="MainWindow_TrimVideo" xml:space="preserve"><value>חיתוך וידאו...</value></data>
 </root>

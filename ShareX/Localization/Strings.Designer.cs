@@ -953,6 +953,15 @@ namespace ShareX.Localization {
                 return ResourceManager.GetString("MainWindow_EditImage", resourceCulture);
             }
         }
+
+        /// <summary>
+        ///   Looks up a localized string similar to Trim video....
+        /// </summary>
+        public static string MainWindow_TrimVideo {
+            get {
+                return ResourceManager.GetString("MainWindow_TrimVideo", resourceCulture);
+            }
+        }
         
         /// <summary>
         ///   Looks up a localized string similar to File.

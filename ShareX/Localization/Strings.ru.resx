@@ -2885,4 +2885,5 @@
   <data name="YourSystemAdminDisabledTheUploadFeature" xml:space="preserve">
     <value>Ваш системный администратор отключил возможность загрузки.</value>
   </data>
+  <data name="MainWindow_TrimVideo" xml:space="preserve"><value>Обрезать видео...</value></data>
 </root>

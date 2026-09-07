@@ -2885,4 +2885,5 @@ Později je můžete zakázat v nabídce „Úlohy po zachycení“.</value>
   <data name="YourSystemAdminDisabledTheUploadFeature" xml:space="preserve">
     <value>Správce systému zakázal funkci nahrávání.</value>
   </data>
+  <data name="MainWindow_TrimVideo" xml:space="preserve"><value>Oříznout video...</value></data>
 </root>

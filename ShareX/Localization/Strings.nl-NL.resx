@@ -2885,4 +2885,5 @@ You can later disable it from "After opname taken" menu.</value>
   <data name="YourSystemAdminDisabledTheUploadFeature" xml:space="preserve">
     <value>Your system admin uitgeschakeld the uploaden feature.</value>
   </data>
+  <data name="MainWindow_TrimVideo" xml:space="preserve"><value>Video bijsnijden...</value></data>
 </root>

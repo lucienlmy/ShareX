@@ -2885,4 +2885,5 @@ You can later disable it from "After ضبط tasks" منو.</value>
   <data name="YourSystemAdminDisabledTheUploadFeature" xml:space="preserve">
     <value>Your system admin disabled the بارگذاری feature.</value>
   </data>
+  <data name="MainWindow_TrimVideo" xml:space="preserve"><value>برش ویدئو...</value></data>
 </root>

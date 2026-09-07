@@ -2885,4 +2885,5 @@ Você pode desativar posteriormente no menu "Tarefas após a captura".</value>
   <data name="YourSystemAdminDisabledTheUploadFeature" xml:space="preserve">
     <value>O administrador do sistema desativou o recurso de upload.</value>
   </data>
+  <data name="MainWindow_TrimVideo" xml:space="preserve"><value>Cortar vídeo...</value></data>
 </root>

@@ -2885,4 +2885,5 @@
   <data name="YourSystemAdminDisabledTheUploadFeature" xml:space="preserve">
     <value>ผู้ดูแลระบบของคุณปิดใช้งานคุณลักษณะการอัปโหลด</value>
   </data>
+  <data name="MainWindow_TrimVideo" xml:space="preserve"><value>ตัดวิดีโอ...</value></data>
 </root>

@@ -2888,4 +2888,5 @@ You can later disable it from "After capture tasks" menu.</value>
   <data name="YourSystemAdminDisabledTheUploadFeature" xml:space="preserve">
     <value>Your system admin disabled the upload feature.</value>
   </data>
+  <data name="MainWindow_TrimVideo" xml:space="preserve"><value>Trim video...</value></data>
 </root>

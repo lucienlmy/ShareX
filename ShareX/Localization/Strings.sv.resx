@@ -2885,4 +2885,5 @@ Du kan inaktivera dem senare från menyn "Uppgifter efter bildtagning".</value>
   <data name="YourSystemAdminDisabledTheUploadFeature" xml:space="preserve">
     <value>Din systemadministratör har inaktiverat uppladdningsfunktionen.</value>
   </data>
+  <data name="MainWindow_TrimVideo" xml:space="preserve"><value>Trimma video...</value></data>
 </root>

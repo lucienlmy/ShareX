@@ -46,6 +46,7 @@ namespace ShareX
         public bool IsThumbnailFilePathValid { get; private set; }
         public bool IsThumbnailFileExist { get; private set; }
         public bool IsImageFile { get; private set; }
+        public bool IsVideoFile { get; private set; }
         public bool IsTextFile { get; private set; }
 
         public UploadInfoStatus(WorkerTask task)
@@ -72,6 +73,7 @@ namespace ShareX
             IsThumbnailFilePathValid = !string.IsNullOrEmpty(Info.ThumbnailFilePath) && Path.HasExtension(Info.ThumbnailFilePath);
             IsThumbnailFileExist = IsThumbnailFilePathValid && File.Exists(Info.ThumbnailFilePath);
             IsImageFile = IsFileExist && FileHelpers.IsImageFile(Info.FilePath);
+            IsVideoFile = IsFileExist && FileHelpers.IsVideoFile(Info.FilePath);
             IsTextFile = IsFileExist && FileHelpers.IsTextFile(Info.FilePath);
         }
     }

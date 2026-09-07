@@ -2885,4 +2885,5 @@
   <data name="YourSystemAdminDisabledTheUploadFeature" xml:space="preserve">
     <value>مسؤول النظام قام بإيقاف وظيفة الرفع.</value>
   </data>
+  <data name="MainWindow_TrimVideo" xml:space="preserve"><value>قص الفيديو...</value></data>
 </root>

@@ -2885,4 +2885,5 @@ You can later disable it from "Rögzítés után tasks" menü.</value>
   <data name="YourSystemAdminDisabledTheUploadFeature" xml:space="preserve">
     <value>Your system admin letiltva the feltöltés feature.</value>
   </data>
+  <data name="MainWindow_TrimVideo" xml:space="preserve"><value>Videó vágása...</value></data>
 </root>

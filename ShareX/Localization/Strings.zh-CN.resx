@@ -2885,4 +2885,5 @@
   <data name="YourSystemAdminDisabledTheUploadFeature" xml:space="preserve">
     <value>您的系统管理员禁止了上传功能。</value>
   </data>
+  <data name="MainWindow_TrimVideo" xml:space="preserve"><value>剪辑视频...</value></data>
 </root>

@@ -382,6 +382,14 @@ namespace ShareX
             if (IsItemSelected && SelectedItem.IsImageFile) TaskHelpers.AnnotateImageFromFile(SelectedItem.Info.FilePath);
         }
 
+        public void TrimVideo()
+        {
+            if (IsItemSelected && SelectedItem.IsVideoFile)
+            {
+                TaskHelpers.OpenVideoTrimmer(SelectedItem.Info.TaskSettings, SelectedItem.Info.FilePath);
+            }
+        }
+
         public void BeautifyImage()
         {
             if (IsItemSelected && SelectedItem.IsImageFile) TaskHelpers.OpenImageBeautifier(SelectedItem.Info.FilePath);
