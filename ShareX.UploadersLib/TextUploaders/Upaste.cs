@@ -26,6 +26,7 @@
 using Newtonsoft.Json;
 using System;
 using System.Collections.Generic;
+using System.Collections.Specialized;
 
 namespace ShareX.UploadersLib.TextUploaders
 {
@@ -46,7 +47,7 @@ namespace ShareX.UploadersLib.TextUploaders
 
     public sealed class Upaste : TextUploader
     {
-        private const string APIURL = "http://upaste.me/api";
+        private const string APIURL = "https://upaste.me/api/v2/paste";
 
         public string UserKey { get; private set; }
         public bool IsPublic { get; set; }
@@ -62,19 +63,20 @@ namespace ShareX.UploadersLib.TextUploaders
 
             if (!string.IsNullOrEmpty(text))
             {
-                Dictionary<string, string> arguments = new Dictionary<string, string>();
+                NameValueCollection headers = new NameValueCollection();
                 if (!string.IsNullOrEmpty(UserKey))
                 {
-                    arguments.Add("api_key", UserKey);
+                    headers.Add("Authorization", "Bearer " + UserKey);
                 }
+
+                Dictionary<string, string> arguments = new Dictionary<string, string>();
                 arguments.Add("paste", text);
                 //arguments.Add("syntax", "");
                 //arguments.Add("name", "");
-                arguments.Add("privacy", IsPublic ? "0" : "1"); // 0 public 1 private
+                arguments.Add("privacy", IsPublic ? "0" : "1"); // 0 public 1 unlisted
                 arguments.Add("expire", "0");
-                arguments.Add("json", "true");
 
-                ur.Response = await SendRequestMultiPartAsync(APIURL, arguments, cancellationToken: cancellationToken).ConfigureAwait(false);
+                ur.Response = await SendRequestMultiPartAsync(APIURL, arguments, headers: headers, cancellationToken: cancellationToken).ConfigureAwait(false);
 
                 if (!string.IsNullOrEmpty(ur.Response))
                 {
@@ -99,7 +101,7 @@ namespace ShareX.UploadersLib.TextUploaders
 
         public class UpastePaste
         {
-            public string id { get; set; }
+            public string key { get; set; }
             public string link { get; set; }
             public string raw { get; set; }
             public string download { get; set; }
